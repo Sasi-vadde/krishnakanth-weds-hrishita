@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Vaddey Family//Wedding Invite//EN
+PRODID:-//Vadde Family//Wedding Invite//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
@@ -9,7 +9,7 @@ DTSTAMP:20261110T000000Z
 DTSTART:20261204T053000Z
 DTEND:20261204T083000Z
 SUMMARY:Krishnakanth & Hrishita's Wedding Vindu (Reception)
-DESCRIPTION:Wedding feast (Vindu) hosted at the Vaddey family home in Mortha village.
+DESCRIPTION:Wedding feast (Vindu) hosted at the Vadde family home in Mortha village.
 LOCATION:H.No 4-11\, Santha Market Street\, Mortha Village & Post\, Undrajavaram Mandal\, West Godavari\, Andhra Pradesh 534227
 STATUS:CONFIRMED
 END:VEVENT
