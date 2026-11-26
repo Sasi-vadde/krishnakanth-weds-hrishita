@@ -117,6 +117,32 @@
     color: #8a7a6c;
   }
 </style>
+<script>
+  // Google Analytics 4: paste your Measurement ID (looks like G-ABC123XYZ9) below.
+  // Until it is set, nothing is loaded or sent.
+  var GA_ID = 'G-NSSNGYV28H';
+  if (/^G-[A-Z0-9]{6,}$/.test(GA_ID) && GA_ID !== 'G-XXXXXXXXXX') {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { dataLayer.push(arguments); };
+    gtag('js', new Date());
+    gtag('config', GA_ID);
+    // Track which actions guests use most
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a');
+      if (!a) return;
+      var h = a.getAttribute('href') || '';
+      var type = a.classList.contains('maps') ? 'open_maps'
+               : /\.ics$/.test(h) ? 'add_calendar'
+               : /^tel:/.test(h) ? 'call_contact'
+               : /qr-code-card/.test(h) ? 'download_qr' : null;
+      if (type) gtag('event', type, { link: h.slice(0, 100) });
+    });
+  }
+</script>
 </head>
 <body>
 
